@@ -1,12 +1,12 @@
 function ConvertHandler() {
-	const DIGIT_REGEX = /^[0-9]*\.?[0-9]*$/;
-	const LETTERS_REGEX = /^[a-zA-z]+$/; 
+	const DIGIT_REGEX = /[^a-zA-z]/g;
+	const LETTERS_REGEX = /[^0-9.]/g;
 
   this.getNum = function(input) {
- 	console.log('getNum success')
-	console.log('input is: ' + input)
-	console.log(typeof input)
-	let result = input.match(DIGIT_REGEX);
+ 	// console.log('getNum success');
+	// console.log('input is: ' + input);
+	// console.log(typeof input);
+	let result = input.match(DIGIT_REGEX); 
 	console.log('getNum results: ' + result);
 	return result;  
   };
