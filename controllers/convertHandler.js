@@ -7,7 +7,10 @@ function ConvertHandler() {
 	// console.log('input is: ' + input);
 	// console.log(typeof input);
 	let result = input.match(DIGIT_REGEX); 
-	console.log('getNum results: ' + result);
+	result = result.join('');
+	//console.log('getNum results: ' + result);
+	//let parsedResult = result.join('');
+	//console.log('parsedResult: ' + parsedResult);
 	return result;  
   };
   
