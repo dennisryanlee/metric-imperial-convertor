@@ -3,22 +3,14 @@ function ConvertHandler() {
 	const LETTERS_REGEX = /[^0-9.]/g;
 
   this.getNum = function(input) {
- 	// console.log('getNum success');
-	// console.log('input is: ' + input);
-	// console.log(typeof input);
 	let result = input.match(DIGIT_REGEX); 
 	result = result.join('');
-	//console.log('getNum results: ' + result);
-	//let parsedResult = result.join('');
-	//console.log('parsedResult: ' + parsedResult);
 	return result;  
   };
   
   this.getUnit = function(input) {
-	let result = function validate(input) {
-		return input.match(LETTERS_REGEX);
-	};
-	console.log('getUnit results: ' + results);
+	let result = input.match(LETTERS_REGEX);
+	result = result.join('');
 	return result;
   };
   
@@ -114,19 +106,17 @@ function ConvertHandler() {
 				break;
 		}
 
-	return returnNum; 
+	return +returnNum.toFixed(5); 
 
   };
   
-  this.getString = function(initNum, initUnit, returnNum, returnUnit) {
-	let result = {
-		initNum: initNum,
-		initUnit: initUnit,
-		returnNum: returnNum,
-		returnUnit: returnUnit
-	};
+  this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
+	let initialSpellOut = spellOutUnit(initUnit);
+	console.log(initialSpellOut);
+//	let returnSpellOut = spellOutUnit(returnUnit);
+//	let result = `${initNum} ${initialSpellOut} converts to ${returnNum} ${returnSpellOut}`;
 
-    return result;
+	return 'hello'//result;
   };
   
 }

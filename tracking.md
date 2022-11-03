@@ -1,5 +1,8 @@
 Tracking:
 
+11/02/22: work on returnNum and returnUnit; work on formula
+tomorrow - formula mostly working; work on spelling out units - particularly on return unit value
+
 11/01/22: concat string result from regex
 tomorrow - work on returning letter input, then processing into formula
 
