@@ -27,17 +27,24 @@ module.exports = function (app) {
 			
 			let initNum = convertHandler.getNum(input);
 			console.log('initNum is: ',initNum);
+		
 			let initUnit = convertHandler.getUnit(input);
 			console.log('initUnit is: ',initUnit);
+			console.log('typeof initUnit is: ',typeof initUnit);
+
 			let returnNum = convertHandler.convert(initNum, initUnit);
 			console.log('returnNum is: ',returnNum);
+
 			let returnUnit = convertHandler.getReturnUnit(initUnit);
 			console.log('returnUnit is: ',returnUnit);
+			console.log('typeof returnUnit is: ',typeof returnUnit);
 			
 			let initialSpellOut = convertHandler.spellOutUnit(initUnit);
 			console.log('initialSpellOut is: ',initialSpellOut);
+
 			let returnSpellOut = convertHandler.spellOutUnit(returnUnit);
 			console.log('returnSpellOut is: ',returnSpellOut);
+
 
 			
 			let result = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);	

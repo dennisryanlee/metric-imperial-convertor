@@ -15,63 +15,49 @@ function ConvertHandler() {
   };
   
   this.getReturnUnit = function(initUnit) {
-   	let result;
+   	let result = '';
 
 	switch (initUnit) {
 		case 'gal':
-			result = 'kgs';
-			break;
+			return result = 'kgs';
 		case 'L' || 'l':
-			result = 'gal';
-			break;
+			return result = 'gal';
 		case 'lbs' || 'lb':
-			result = 'kgs';
-			break;
+			return result = 'kgs';
 		case 'kg' || 'kgs':
-			result = 'lbs';
-			break;
+			return result = 'lbs';
 		case 'mi':
-			result = 'km';
-			break;
+			return result = 'km';
 		case 'km':
-			result: 'mi';
-			break;
+			return result = 'mi';
 		default:
 			console.log('No match found for getReturnUnit');
-			break;
+			return result = 'NO INIT UNIT';
 		}
 
-		return result; 
   };
 
   this.spellOutUnit = function(unit) {
-	let result;
+	let result = '';
 
 	switch (unit) {
 		case 'gal':
-			result = 'gallons';
-			break;
+			return result = 'gallons';
 		case 'L' || 'l':
-			result = 'liters';
-			break;
+			return result = 'liters';
 		case 'lbs' || 'lb':
-			result = 'pounds';
-			break;
+			return result = 'pounds';
 		case 'kg' || 'kgs':
-			result = 'kilograms';
-			break;
+			return result = 'kilograms';
 		case 'mi':
-			result = 'miles';
-			break;
+			return result = 'miles';
 		case 'km':
-			result: 'kilometers';
-			break;
+			return result = 'kilometers';
 		default:
 			console.log('No match found for spellOutUnit');
-			break;
+			return result = 'NO SPELL OUT UNIT';
 		}
 
-		return result; 
 
   };
   
@@ -80,41 +66,42 @@ function ConvertHandler() {
 	const lbsToKg = 0.453592;
 	const miToKm = 1.60934;
 	
-	let returnNum;
+	let returnNum = 0;
 
 		switch (initUnit) {
 			case 'gal':
 				returnNum = initNum * galToL;
-				break;
+				return +returnNum.toFixed(5); 
 			case 'L' || 'l':
 				returnNum = initNum / galToL;
-				break;
+				return +returnNum.toFixed(5); 
 			case 'lbs' || 'lb':
 				returnNum = initNum * lbsToKg;
-				break;
+				return +returnNum.toFixed(5); 
 			case 'kg' || 'kgs':
 				returnNum = initNum / lbsToKg;
-				break;
+				return +returnNum.toFixed(5); 
 			case 'mi':
 				returnNum = initNum * miToKm;
-				break;
+				return +returnNum.toFixed(5); 
 			case 'km':
 				returnNum = initNum / miToKm;
-				break;
+				return +returnNum.toFixed(5); 
 			default:
 				console.log('No match found for initUnit in this.convert');
-				break;
+				returnNum = 0;
+				return returnNum; 
 		}
 
-	return +returnNum.toFixed(5); 
 
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
 	let initialSpellOut = spellOutUnit(initUnit);
+	console.log('*************************************************************************');
 	console.log(initialSpellOut);
-//	let returnSpellOut = spellOutUnit(returnUnit);
-//	let result = `${initNum} ${initialSpellOut} converts to ${returnNum} ${returnSpellOut}`;
+	let returnSpellOut = spellOutUnit(returnUnit);
+	let result = `${initNum} ${initialSpellOut} converts to ${returnNum} ${returnSpellOut}`;
 
 	return 'hello'//result;
   };

@@ -1,5 +1,8 @@
 Tracking:
 
+11/04/22: change switch statements to remove breaks and just do returns
+tomorrow - keep troubleshooting formulas
+
 11/02/22: work on returnNum and returnUnit; work on formula
 tomorrow - formula mostly working; work on spelling out units - particularly on return unit value
 
