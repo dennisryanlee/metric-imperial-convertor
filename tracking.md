@@ -1,5 +1,8 @@
 Tracking:
 
+11/05/22: got formula working correctly (I think?)
+tomorrow - post work so far to replit and test with FreeCodeCamp tests
+
 11/04/22: change switch statements to remove breaks and just do returns
 tomorrow - keep troubleshooting formulas
 

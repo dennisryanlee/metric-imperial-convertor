@@ -97,13 +97,11 @@ function ConvertHandler() {
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
-	let initialSpellOut = spellOutUnit(initUnit);
-	console.log('*************************************************************************');
-	console.log(initialSpellOut);
-	let returnSpellOut = spellOutUnit(returnUnit);
+	let initialSpellOut = this.spellOutUnit(initUnit);
+	let returnSpellOut = this.spellOutUnit(returnUnit);
 	let result = `${initNum} ${initialSpellOut} converts to ${returnNum} ${returnSpellOut}`;
 
-	return 'hello'//result;
+	return result;
   };
   
 }
