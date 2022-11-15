@@ -1,5 +1,9 @@
 Tracking:
 
+11/14/22:
+Accomplished - moved project to replit; ran initial FreeCodeCamp tests on project; started to look into how to handle edge cases on user input (put in zero or invalid units or values)
+Tomorrow - need to change formula so invalid unit or value (or both) shows only that for input
+
 11/05/22: got formula working correctly (I think?)
 tomorrow - post work so far to replit and test with FreeCodeCamp tests
 

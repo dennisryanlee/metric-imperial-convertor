@@ -1,20 +1,34 @@
 function ConvertHandler() {
 	const DIGIT_REGEX = /[^a-zA-z]/g;
 	const LETTERS_REGEX = /[^0-9.]/g;
+	let invalidNumber = false;
+	let invalidUnit = false;
 
   this.getNum = function(input) {
-	let result = input.match(DIGIT_REGEX); 
+	console.log('getNum started');
+	let result = input.match(DIGIT_REGEX) || 0;
+	if (result === 0) {
+		result = 1;
+		invalidNumber = true;
+		return result;
+	};
 	result = result.join('');
 	return result;  
   };
   
   this.getUnit = function(input) {
-	let result = input.match(LETTERS_REGEX);
+	console.log('getUnit started');
+	let result = input.match(LETTERS_REGEX) || '';
+	if (result === '') {
+		invalidUnit = true;
+		return result;
+	};
 	result = result.join('');
 	return result;
   };
   
   this.getReturnUnit = function(initUnit) {
+	console.log('getReturnUnit started');
    	let result = '';
 
 	switch (initUnit) {
@@ -31,13 +45,15 @@ function ConvertHandler() {
 		case 'km':
 			return result = 'mi';
 		default:
-			console.log('No match found for getReturnUnit');
-			return result = 'NO INIT UNIT';
+			return;
+			//console.log('No match found for getReturnUnit');
+			//return result = 'NO INIT UNIT';
 		}
 
   };
 
   this.spellOutUnit = function(unit) {
+	console.log('spellOutUnit started');
 	let result = '';
 
 	switch (unit) {
@@ -54,14 +70,16 @@ function ConvertHandler() {
 		case 'km':
 			return result = 'kilometers';
 		default:
-			console.log('No match found for spellOutUnit');
-			return result = 'NO SPELL OUT UNIT';
+			return;
+			//console.log('No match found for spellOutUnit');
+			//return result = 'NO SPELL OUT UNIT';
 		}
 
 
   };
   
   this.convert = function(initNum, initUnit) {
+	console.log('convert started');
 	const galToL = 3.78541;
 	const lbsToKg = 0.453592;
 	const miToKm = 1.60934;
@@ -97,11 +115,23 @@ function ConvertHandler() {
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
+	console.log('getString started');
+	if (invalidNumber === true && invalidUnit === true) {
+		return 'invalid number and unit';
+	} else if (invalidNumber === true) {
+		return 'invalid number';
+	} else if (invalidUnit === true) {
+		return 'invalid unit';
+	} else {
+
 	let initialSpellOut = this.spellOutUnit(initUnit);
 	let returnSpellOut = this.spellOutUnit(returnUnit);
 	let result = `${initNum} ${initialSpellOut} converts to ${returnNum} ${returnSpellOut}`;
 
 	return result;
+	};
+
+
   };
   
 }
