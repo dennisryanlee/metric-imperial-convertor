@@ -116,21 +116,13 @@ function ConvertHandler() {
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
 	console.log('getString started');
-	if (invalidNumber === true && invalidUnit === true) {
-		return 'invalid number and unit';
-	} else if (invalidNumber === true) {
-		return 'invalid number';
-	} else if (invalidUnit === true) {
-		return 'invalid unit';
-	} else {
+	console.log(`invalidNumber is ${invalidNumber} and invalidUnit is ${invalidUnit}`);
 
 	let initialSpellOut = this.spellOutUnit(initUnit);
 	let returnSpellOut = this.spellOutUnit(returnUnit);
+
 	let result = `${initNum} ${initialSpellOut} converts to ${returnNum} ${returnSpellOut}`;
-
 	return result;
-	};
-
 
   };
   

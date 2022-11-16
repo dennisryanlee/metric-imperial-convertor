@@ -1,5 +1,9 @@
 Tracking:
 
+11/15/22:
+Accomplished - recorded pseudocode for handling edge cases
+Tomorrow - write code for handling edge cases
+
 11/14/22:
 Accomplished - moved project to replit; ran initial FreeCodeCamp tests on project; started to look into how to handle edge cases on user input (put in zero or invalid units or values)
 Tomorrow - need to change formula so invalid unit or value (or both) shows only that for input
