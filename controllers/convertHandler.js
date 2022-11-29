@@ -2,13 +2,10 @@ function ConvertHandler() {
 	const DIGIT_REGEX = /\d|\.|\//g;		//  /[^a-zA-z]/g;
 	const LETTERS_REGEX = /[^0-9.]/g;
 	const SLASH_REGEX = /\//g;
-	let invalidNumber = false;
-	let invalidUnit = false;
+	const UNIT_REGEX = /(gal)|(mi)|(km)|(lbs)|(kg)|(lb)/gi;  // note that this will cause errors with 'mii' and 'kmm' etc.
 
   this.getNum = function(input) {
-	
 	console.log('getNum started');
-
 	let result = input.match(DIGIT_REGEX || []);
 	if (result != null) {
 	  result = result.join('');
@@ -19,37 +16,36 @@ function ConvertHandler() {
 	if (slashArray != null) {
 		slashCount = slashArray.length;
 	};
-
 	if (result === null) {
-
 	// first test if there is a number at all - if not, default to one
 	// note that if the actual number is "0" then this will match in regex and not
 	// trigger this if clause
-
 		result = 1;
 		return result;
-
 	} else if (slashCount > 1) {
-
 	// then check if valid number - if fraction, that is okay; but if double-fraction that should return error
-		return "invalid number";
-
-	} else {		// default condition
+		return 'invalid number';
+	} else {	
+	// default condition
 		return result;
 	};
   };
-  
-
 
   this.getUnit = function(input) {
 	console.log('getUnit started');
-	let result = input.match(LETTERS_REGEX) || '';
-	if (result === '') {
-		invalidUnit = true;
+	let result = input.match(UNIT_REGEX || []);
+	console.log('stage 1 result:', result);
+
+	if (result === null) {
+	// if there are no matching units then return 'invalid unit'
+		return 'invalid unit';
+	} else {
+	// default condition
+		result = result.join('');	     	
+		console.log('stage 2 result',result);
 		return result;
 	};
-	result = result.join('');
-	return result;
+	
   };
  
 /*

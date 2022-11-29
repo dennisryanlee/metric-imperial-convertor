@@ -27,20 +27,39 @@ module.exports = function (app) {
 			let invalidNumber = false;
 			let invalidUnit = false;
 
-
 			let initNum = convertHandler.getNum(input);
 			if (initNum === 'invalid number') {
 				invalidNumber = true;
 			};
-
 			
 			let initUnit = convertHandler.getUnit(input);
+			if (initUnit === 'invalid unit') {
+				invalidUnit = true;
+			};
 
+			if (invalidNumber === true && invalidUnit === true) {
+			// if both the number and unit are invalid
+				res.json({ 
+					error: 'invalid unit and invalid number'
+				});
+			} else if (invalidNumber === true) {
+			// if just the number is invalid
+				res.json({
+					error: 'invalid number'
+				});
+			} else if (invalidUnit === true) {
+			// if just the unit is invalid
+				res.json({
+					error: 'invalid unit'
+				});
+			} else {
+			// otherwise, proceed normally
+				res.json({
+					initNum: initNum,
+					initUnit: initUnit
+				});
+			};
 
-			res.json({
-				initNum: initNum,
-				initUnit: initUnit
-			});
 
 			/*
 			let returnNum = convertHandler.convert(initNum, initUnit);

@@ -1,6 +1,10 @@
 Tracking:
 
-11/29/22:
+11/29/22 #2:
+Accomplished - resolved handling wrong unit in getUnit function
+Tomorrow - proceed to implement additional functions after getNum and getUnit
+
+11/29/22 #1:
 Accomplished - commented out bulk of code; resolved handling wrong number in getNum function
 Tomorrow - 
 
