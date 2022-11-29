@@ -1,21 +1,46 @@
 function ConvertHandler() {
-	const DIGIT_REGEX = /[^a-zA-z]/g;
+	const DIGIT_REGEX = /\d|\.|\//g;		//  /[^a-zA-z]/g;
 	const LETTERS_REGEX = /[^0-9.]/g;
+	const SLASH_REGEX = /\//g;
 	let invalidNumber = false;
 	let invalidUnit = false;
 
   this.getNum = function(input) {
+	
 	console.log('getNum started');
-	let result = input.match(DIGIT_REGEX) || 0;
-	if (result === 0) {
+
+	let result = input.match(DIGIT_REGEX || []);
+	if (result != null) {
+	  result = result.join('');
+	};
+
+	let slashArray = input.match(SLASH_REGEX || []);
+	let slashCount = 0;  
+	if (slashArray != null) {
+		slashCount = slashArray.length;
+	};
+
+	if (result === null) {
+
+	// first test if there is a number at all - if not, default to one
+	// note that if the actual number is "0" then this will match in regex and not
+	// trigger this if clause
+
 		result = 1;
-		invalidNumber = true;
+		return result;
+
+	} else if (slashCount > 1) {
+
+	// then check if valid number - if fraction, that is okay; but if double-fraction that should return error
+		return "invalid number";
+
+	} else {		// default condition
 		return result;
 	};
-	result = result.join('');
-	return result;  
   };
   
+
+
   this.getUnit = function(input) {
 	console.log('getUnit started');
 	let result = input.match(LETTERS_REGEX) || '';
@@ -26,7 +51,9 @@ function ConvertHandler() {
 	result = result.join('');
 	return result;
   };
-  
+ 
+/*
+
   this.getReturnUnit = function(initUnit) {
 	console.log('getReturnUnit started');
    	let result = '';
@@ -125,7 +152,9 @@ function ConvertHandler() {
 	return result;
 
   };
-  
+*/  
 }
+
+
 
 module.exports = ConvertHandler;

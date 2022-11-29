@@ -1,5 +1,9 @@
 Tracking:
 
+11/29/22:
+Accomplished - commented out bulk of code; resolved handling wrong number in getNum function
+Tomorrow - 
+
 11/15/22:
 Accomplished - recorded pseudocode for handling edge cases
 Tomorrow - write code for handling edge cases

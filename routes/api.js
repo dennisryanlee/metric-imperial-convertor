@@ -23,15 +23,26 @@ module.exports = function (app) {
 				if just 'invalid unit' - return 'invalid unit'
 
 			Otherwise, proceed to process normally
-
-
-
-
-
 			*/
+			let invalidNumber = false;
+			let invalidUnit = false;
+
 
 			let initNum = convertHandler.getNum(input);
+			if (initNum === 'invalid number') {
+				invalidNumber = true;
+			};
+
+			
 			let initUnit = convertHandler.getUnit(input);
+
+
+			res.json({
+				initNum: initNum,
+				initUnit: initUnit
+			});
+
+			/*
 			let returnNum = convertHandler.convert(initNum, initUnit);
 			let returnUnit = convertHandler.getReturnUnit(initUnit);
 			let initialSpellOut = convertHandler.spellOutUnit(initUnit);
@@ -39,12 +50,11 @@ module.exports = function (app) {
 			let finalString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit);	
 		
 			res.json({
-				 initNum: initNum, 
-				 initUnit: initUnit,
 				 returnNum: returnNum,
 				 returnUnit: returnUnit,
 				 string: finalString
 			 });
+			 */
       
 		} catch (err) {
 			console.log('Error - catch block');
