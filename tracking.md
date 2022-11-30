@@ -1,5 +1,9 @@
 Tracking:
 
+11/30/22:
+Accomplished - resolved handling of conversion, spellOutUnit, and getString functions 
+Tomorrow - resolve why some units are not working properly and others are okay (test all units)
+
 11/29/22 #2:
 Accomplished - resolved handling wrong unit in getUnit function
 Tomorrow - proceed to implement additional functions after getNum and getUnit

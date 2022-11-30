@@ -1,8 +1,8 @@
 function ConvertHandler() {
 	const DIGIT_REGEX = /\d|\.|\//g;		//  /[^a-zA-z]/g;
-	const LETTERS_REGEX = /[^0-9.]/g;
 	const SLASH_REGEX = /\//g;
-	const UNIT_REGEX = /(gal)|(mi)|(km)|(lbs)|(kg)|(lb)/gi;  // note that this will cause errors with 'mii' and 'kmm' etc.
+	const UNIT_REGEX = /(gal)|(mi)|(km)|(lbs)|(kg)|(lb)|(l)/gi;  // note 
+				// that this will cause errors with 'mii' and 'kmm' etc.
 
   this.getNum = function(input) {
 	console.log('getNum started');
@@ -16,6 +16,7 @@ function ConvertHandler() {
 	if (slashArray != null) {
 		slashCount = slashArray.length;
 	};
+	console.log('slashCount is: ',slashCount);
 	if (result === null) {
 	// first test if there is a number at all - if not, default to one
 	// note that if the actual number is "0" then this will match in regex and not
@@ -23,8 +24,17 @@ function ConvertHandler() {
 		result = 1;
 		return result;
 	} else if (slashCount > 1) {
-	// then check if valid number - if fraction, that is okay; but if double-fraction that should return error
+	// then check if valid number - if fraction, that is okay;
+		// but if double-fraction that should return error
 		return 'invalid number';
+	} else if (slashCount == 1) {
+	// convert fraction to decimal
+		const parseFraction = fraction => {
+			const [numerator, denominator] = fraction.split('/').map(Number);
+			return numerator / denominator;
+		};
+		console.log('parseFraction result is: ',parseFraction(result));
+		return parseFraction(result);
 	} else {	
 	// default condition
 		return result;
@@ -34,7 +44,6 @@ function ConvertHandler() {
   this.getUnit = function(input) {
 	console.log('getUnit started');
 	let result = input.match(UNIT_REGEX || []);
-	console.log('stage 1 result:', result);
 
 	if (result === null) {
 	// if there are no matching units then return 'invalid unit'
@@ -42,14 +51,11 @@ function ConvertHandler() {
 	} else {
 	// default condition
 		result = result.join('');	     	
-		console.log('stage 2 result',result);
 		return result;
 	};
 	
   };
  
-/*
-
   this.getReturnUnit = function(initUnit) {
 	console.log('getReturnUnit started');
    	let result = '';
@@ -94,11 +100,7 @@ function ConvertHandler() {
 			return result = 'kilometers';
 		default:
 			return;
-			//console.log('No match found for spellOutUnit');
-			//return result = 'NO SPELL OUT UNIT';
 		}
-
-
   };
   
   this.convert = function(initNum, initUnit) {
@@ -106,7 +108,7 @@ function ConvertHandler() {
 	const galToL = 3.78541;
 	const lbsToKg = 0.453592;
 	const miToKm = 1.60934;
-	
+
 	let returnNum = 0;
 
 		switch (initUnit) {
@@ -133,13 +135,10 @@ function ConvertHandler() {
 				returnNum = 0;
 				return returnNum; 
 		}
-
-
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
 	console.log('getString started');
-	console.log(`invalidNumber is ${invalidNumber} and invalidUnit is ${invalidUnit}`);
 
 	let initialSpellOut = this.spellOutUnit(initUnit);
 	let returnSpellOut = this.spellOutUnit(returnUnit);
@@ -148,9 +147,6 @@ function ConvertHandler() {
 	return result;
 
   };
-*/  
 }
-
-
 
 module.exports = ConvertHandler;
