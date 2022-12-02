@@ -61,7 +61,7 @@ function ConvertHandler() {
 
 	switch (initUnit) {
 		case 'gal':
-			return result = 'kg';
+			return result = 'L';
 		case 'L' || 'l':
 			return result = 'gal';
 		case 'lbs' || 'lb':
