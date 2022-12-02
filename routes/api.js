@@ -9,6 +9,7 @@ module.exports = function (app) {
 
 	app.route('/api/convert').get((req, res) => {
 		let input = req.query.input;
+		console.log('input is: ',input);
 		try {
 			let invalidNumber = false;
 			let invalidUnit = false;

@@ -1,7 +1,7 @@
 Tracking:
 
 12/02/22:
-Accomplished - resolved problem with some units - I was returing "kgs" in the getReturnUnit function incorrectly; post new version on replit to test; resolve gal to L (was kg incorrectly)
+Accomplished - resolved problem with some units - I was returing "kgs" in the getReturnUnit function incorrectly; post new version on replit to test; resolve gal to L (was kg incorrectly); remove unneeded console.logs; add additional console.log to test input
 Tomorrow - 
 Units:
 gal - OK

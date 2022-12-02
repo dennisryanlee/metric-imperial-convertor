@@ -5,7 +5,6 @@ function ConvertHandler() {
 				// that this will cause errors with 'mii' and 'kmm' etc.
 
   this.getNum = function(input) {
-	console.log('getNum started');
 	let result = input.match(DIGIT_REGEX || []);
 	if (result != null) {
 	  result = result.join('');
@@ -41,7 +40,6 @@ function ConvertHandler() {
   };
 
   this.getUnit = function(input) {
-	console.log('getUnit started');
 	let result = input.match(UNIT_REGEX || []);
 
 	if (result === null) {
@@ -56,7 +54,6 @@ function ConvertHandler() {
   };
  
   this.getReturnUnit = function(initUnit) {
-	console.log('getReturnUnit started');
    	let result = '';
 
 	switch (initUnit) {
@@ -81,7 +78,6 @@ function ConvertHandler() {
   };
 
   this.spellOutUnit = function(unit) {
-	console.log('spellOutUnit started');
 	let result = '';
 
 	switch (unit) {
@@ -103,7 +99,6 @@ function ConvertHandler() {
   };
   
   this.convert = function(initNum, initUnit) {
-	console.log('convert started');
 	const galToL = 3.78541;
 	const lbsToKg = 0.453592;
 	const miToKm = 1.60934;
@@ -137,7 +132,6 @@ function ConvertHandler() {
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
-	console.log('getString started');
 
 	let initialSpellOut = this.spellOutUnit(initUnit);
 	let returnSpellOut = this.spellOutUnit(returnUnit);
