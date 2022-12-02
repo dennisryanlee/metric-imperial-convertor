@@ -71,8 +71,6 @@ function ConvertHandler() {
 			return result = 'mi';
 		default:
 			return;
-			//console.log('No match found for getReturnUnit');
-			//return result = 'NO INIT UNIT';
 		}
 
   };
@@ -103,6 +101,7 @@ function ConvertHandler() {
 	const lbsToKg = 0.453592;
 	const miToKm = 1.60934;
 
+	console.log('initUnit is:',initUnit);
 	let returnNum = 0;
 
 		switch (initUnit) {

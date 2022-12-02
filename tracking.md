@@ -11,6 +11,30 @@ km - OK
 lbs - OK
 kg - OK
 
+FCC tests (input):
+1gal
+10gal
+1l - error
+1lbs
+10lbs
+1kg
+10kg
+1mi
+10mi
+1km
+10km
+1gal
+10L
+1l - error
+1min - error
+1//2gal
+1//2min - error
+mi
+1/5mi
+1.5/7km
+3/2.7km
+2mi
+
 
 11/30/22:
 Accomplished - resolved handling of conversion, spellOutUnit, and getString functions 
