@@ -16,7 +16,6 @@ function ConvertHandler() {
 	if (slashArray != null) {
 		slashCount = slashArray.length;
 	};
-	console.log('slashCount is: ',slashCount);
 	if (result === null) {
 	// first test if there is a number at all - if not, default to one
 	// note that if the actual number is "0" then this will match in regex and not
@@ -62,11 +61,11 @@ function ConvertHandler() {
 
 	switch (initUnit) {
 		case 'gal':
-			return result = 'kgs';
+			return result = 'kg';
 		case 'L' || 'l':
 			return result = 'gal';
 		case 'lbs' || 'lb':
-			return result = 'kgs';
+			return result = 'kg';
 		case 'kg' || 'kgs':
 			return result = 'lbs';
 		case 'mi':

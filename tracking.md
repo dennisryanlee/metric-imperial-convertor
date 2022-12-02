@@ -1,5 +1,17 @@
 Tracking:
 
+12/02/22:
+Accomplished - resolved problem with some units - I was returing "kgs" in the getReturnUnit function incorrectly
+Tomorrow - 
+Units:
+gal - OK
+L - OK
+mi - OK
+km - OK
+lbs - OK
+kg - OK
+
+
 11/30/22:
 Accomplished - resolved handling of conversion, spellOutUnit, and getString functions 
 Tomorrow - resolve why some units are not working properly and others are okay (test all units)
