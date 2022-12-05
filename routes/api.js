@@ -51,9 +51,9 @@ module.exports = function (app) {
 				
 				res.json({
 					initNum: initNum,
-					initUnit: initUnit === 'l' ? 'L' : initUnit,
+					initUnit: initUnit === 'l' ? 'L' : initUnit.toLowerCase(),
 					returnNum: returnNum,
-				 	returnUnit: returnUnit === 'l' ? 'L' : returnUnit,
+				 	returnUnit: returnUnit === 'l' ? 'L' : returnUnit.toLowerCase(),
 				 	string: finalString
 				});
 			};
