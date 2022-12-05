@@ -59,11 +59,15 @@ function ConvertHandler() {
 	switch (initUnit) {
 		case 'gal':
 			return result = 'L';
-		case 'L' || 'l':
+		case 'L':
 			return result = 'gal';
-		case 'lbs' || 'lb':
+		case 'l':
+			return result = 'gal';
+		case 'lbs':
 			return result = 'kg';
-		case 'kg' || 'kgs':
+		case 'lb':
+			return result = 'kg';
+		case 'kg':
 			return result = 'lbs';
 		case 'mi':
 			return result = 'km';
@@ -81,11 +85,15 @@ function ConvertHandler() {
 	switch (unit) {
 		case 'gal':
 			return result = 'gallons';
-		case 'L' || 'l':
+		case 'L':
 			return result = 'liters';
-		case 'lbs' || 'lb':
+		case 'l':
+			return result = 'liters';
+		case 'lbs':
 			return result = 'pounds';
-		case 'kg' || 'kgs':
+		case 'lb':
+			return result = 'pounds';
+		case 'kg':
 			return result = 'kilograms';
 		case 'mi':
 			return result = 'miles';
@@ -108,13 +116,19 @@ function ConvertHandler() {
 			case 'gal':
 				returnNum = initNum * galToL;
 				return +returnNum.toFixed(5); 
-			case 'L' || 'l':
+			case 'L':
 				returnNum = initNum / galToL;
 				return +returnNum.toFixed(5); 
-			case 'lbs' || 'lb':
+			case 'l':
+				returnNum = initNum / galToL;
+				return +returnNum.toFixed(5); 
+			case 'lbs':
 				returnNum = initNum * lbsToKg;
 				return +returnNum.toFixed(5); 
-			case 'kg' || 'kgs':
+			case 'lb':
+				returnNum = initNum * lbsToKg;
+				return +returnNum.toFixed(5); 
+			case 'kg':
 				returnNum = initNum / lbsToKg;
 				return +returnNum.toFixed(5); 
 			case 'mi':
