@@ -28,7 +28,7 @@ module.exports = function (app) {
 			if (invalidNumber === true && invalidUnit === true) {
 			// if both the number and unit are invalid
 				res.json({ 
-					error: 'invalid unit and invalid number'
+					error: 'invalid number and unit'
 				});
 			} else if (invalidNumber === true) {
 			// if just the number is invalid
