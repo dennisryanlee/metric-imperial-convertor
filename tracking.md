@@ -1,5 +1,9 @@
 Tracking:
 
+12/05/22:
+Accomplished - it appears only lowercase units are being accepted; need to change regex to accept uppercase units also; change switch statements to accept uppercase also
+Tomorrow - 
+
 12/04/22:
 Accomplished - switch statements in convertHandler function were not formatted correctly - changed to have single conditions (operators don't work); change console.logs to resolve 'invalid unit' issues; resolve unit regex to match only exact string; add exact wording for string to return 'invalid number and unit'
 Tomorrow - unsure why FCC test about 'upper/lower' case is failing - resolve later; failing on current tests below (NOW RESOLVED); add testing
