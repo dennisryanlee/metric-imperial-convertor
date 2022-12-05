@@ -51,7 +51,7 @@ module.exports = function (app) {
 				
 				res.json({
 					initNum: initNum,
-					initUnit: initUnit,
+					initUnit: initUnit === 'l' ? 'L' : initUnit,
 					returnNum: returnNum,
 				 	returnUnit: returnUnit,
 				 	string: finalString
