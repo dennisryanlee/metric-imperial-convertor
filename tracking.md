@@ -3,8 +3,9 @@ Tracking:
 12/05/22:
 Accomplished - it appears only lowercase units are being accepted; need to change regex to accept uppercase units also; change switch statements to accept uppercase also; resolve comparing arrays in JavaScript - used JSON.stringify - to resolve 'l' init unit problem - unfortunately this didn't solve the problem! = trying different solution - didn't work!; one additional try - change res json initUnit response
 didn't work! - trying additional solution; adding to lowercase to solution; additional solution - change if/else on initUnit
+Afternoon work - starting adding unit tests
 Source - use res.json trick from here: https://replit.com/@epirito/boilerplate-project-metricimpconverter#routes/api.js
-Tomorrow - 
+Tomorrow - continue to work on unit tests
 
 12/04/22:
 Accomplished - switch statements in convertHandler function were not formatted correctly - changed to have single conditions (operators don't work); change console.logs to resolve 'invalid unit' issues; resolve unit regex to match only exact string; add exact wording for string to return 'invalid number and unit'
