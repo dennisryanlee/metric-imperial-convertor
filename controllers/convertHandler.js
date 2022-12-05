@@ -41,11 +41,14 @@ function ConvertHandler() {
 
   this.getUnit = function(input) {
 	let result = input.match(UNIT_REGEX || []);
-	console.log('getUnit unit_regex match result is: ',result);
+	console.log('getUnit unit_regex match result is: ',result, typeof(result));
 
 	if (result === null) {
 	// if there are no matching units then return 'invalid unit'
 		return 'invalid unit';
+	} else if (JSON.stringify(result) === JSON.stringify(['l'])) {
+		result = 'L';
+		return result;
 	} else {
 	// default condition
 		result = result.join('');	     	
