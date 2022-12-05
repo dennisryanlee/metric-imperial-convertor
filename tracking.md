@@ -1,8 +1,11 @@
 Tracking:
 
 12/04/22:
-Accomplished - switch statements in convertHandler function were not formatted correctly - changed to have single conditions (operators don't work)
-Tomorrow - 
+Accomplished - switch statements in convertHandler function were not formatted correctly - changed to have single conditions (operators don't work); change console.logs to resolve 'invalid unit' issues; resolve unit regex to match only exact string
+Tomorrow - unsure why FCC test about 'upper/lower' case is failing - resolve later; failing on current tests below:
+
+1min - error (should return 'invalid unit')
+1//2min - error (should return 'invalid number and unit')
 
 12/02/22:
 Accomplished - resolved problem with some units - I was returing "kgs" in the getReturnUnit function incorrectly; post new version on replit to test; resolve gal to L (was kg incorrectly); remove unneeded console.logs; add additional console.log to test input

@@ -1,7 +1,7 @@
 function ConvertHandler() {
 	const DIGIT_REGEX = /\d|\.|\//g;		//  /[^a-zA-z]/g;
 	const SLASH_REGEX = /\//g;
-	const UNIT_REGEX = /(gal)|(mi)|(km)|(lbs)|(kg)|(lb)|(l)/gi;  // note 
+	const UNIT_REGEX = /(gal$)|(mi$)|(km$)|(lbs$)|(kg$)|(lb$)|(l$)/gi;  // note 
 				// that this will cause errors with 'mii' and 'kmm' etc.
 
   this.getNum = function(input) {
@@ -41,6 +41,7 @@ function ConvertHandler() {
 
   this.getUnit = function(input) {
 	let result = input.match(UNIT_REGEX || []);
+	console.log('getUnit unit_regex match result is: ',result);
 
 	if (result === null) {
 	// if there are no matching units then return 'invalid unit'
@@ -109,7 +110,6 @@ function ConvertHandler() {
 	const lbsToKg = 0.453592;
 	const miToKm = 1.60934;
 
-	console.log('initUnit is:',initUnit);
 	let returnNum = 0;
 
 		switch (initUnit) {
