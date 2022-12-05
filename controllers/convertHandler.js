@@ -162,7 +162,7 @@ function ConvertHandler() {
   };
   
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {  
-
+	  
 	let initialSpellOut = this.spellOutUnit(initUnit);
 	let returnSpellOut = this.spellOutUnit(returnUnit);
 

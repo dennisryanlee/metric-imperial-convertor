@@ -23,6 +23,11 @@ module.exports = function (app) {
 			
 			if (initUnit === 'invalid unit') {
 				invalidUnit = true;
+			} else if (initUnit === 'l') {
+				initUnit === 'L';
+			} else if (initUnit === 'L') {
+			} else {
+				initUnit = initUnit.toLowerCase();
 			};
 
 			if (invalidNumber === true && invalidUnit === true) {
@@ -51,9 +56,9 @@ module.exports = function (app) {
 				
 				res.json({
 					initNum: initNum,
-					initUnit: initUnit === 'l' ? 'L' : initUnit.toLowerCase(),
+					initUnit: initUnit,
 					returnNum: returnNum,
-				 	returnUnit: returnUnit === 'l' ? 'L' : returnUnit.toLowerCase(),
+				 	returnUnit: returnUnit,
 				 	string: finalString
 				});
 			};
