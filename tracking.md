@@ -1,7 +1,7 @@
 Tracking:
 
 12/05/22:
-Accomplished - it appears only lowercase units are being accepted; need to change regex to accept uppercase units also; change switch statements to accept uppercase also; resolve comparing arrays in JavaScript - used JSON.stringify - to resolve 'l' init unit problem
+Accomplished - it appears only lowercase units are being accepted; need to change regex to accept uppercase units also; change switch statements to accept uppercase also; resolve comparing arrays in JavaScript - used JSON.stringify - to resolve 'l' init unit problem - unfortunately this didn't solve the problem! = trying different solution
 Tomorrow - 
 
 12/04/22:

@@ -47,7 +47,8 @@ function ConvertHandler() {
 	// if there are no matching units then return 'invalid unit'
 		return 'invalid unit';
 	} else if (JSON.stringify(result) === JSON.stringify(['l'])) {
-		result = 'L';
+		result = ['L'];
+		result = result.join('');
 		return result;
 	} else {
 	// default condition
