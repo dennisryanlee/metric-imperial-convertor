@@ -2,7 +2,7 @@ Tracking:
 
 12/04/22:
 Accomplished - switch statements in convertHandler function were not formatted correctly - changed to have single conditions (operators don't work); change console.logs to resolve 'invalid unit' issues; resolve unit regex to match only exact string; add exact wording for string to return 'invalid number and unit'
-Tomorrow - unsure why FCC test about 'upper/lower' case is failing - resolve later; failing on current tests below:
+Tomorrow - unsure why FCC test about 'upper/lower' case is failing - resolve later; failing on current tests below (NOW RESOLVED); add testing
 
 1min - error (should return 'invalid unit')
 1//2min - error (should return 'invalid number and unit')
