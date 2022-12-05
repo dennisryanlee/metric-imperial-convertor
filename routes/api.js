@@ -53,7 +53,7 @@ module.exports = function (app) {
 					initNum: initNum,
 					initUnit: initUnit === 'l' ? 'L' : initUnit,
 					returnNum: returnNum,
-				 	returnUnit: returnUnit,
+				 	returnUnit: returnUnit === 'l' ? 'L' : returnUnit,
 				 	string: finalString
 				});
 			};
