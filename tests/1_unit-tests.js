@@ -20,5 +20,9 @@ suite('Unit Tests', function(){
 	test('convertHandler should correctly read a a fractional input with a decimal', function() {
 		assert.isNotNull('1.5/2mi','correctly read a fractional input with a decimal');
 	});
+	
+	test('convertHandler should return an error on a double-fraction', function() {
+		assert.equal('3/2/3mi','invalid number','correctly return an error on a double-fraction');
+	});
 });
 

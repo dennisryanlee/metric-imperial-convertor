@@ -41,7 +41,6 @@ function ConvertHandler() {
 
   this.getUnit = function(input) {
 	let result = input.match(UNIT_REGEX || []);
-	console.log('getUnit unit_regex match result is: ',result, typeof(result));
 
 	if (result === null) {
 	// if there are no matching units then return 'invalid unit'
@@ -49,13 +48,10 @@ function ConvertHandler() {
 	} else if (JSON.stringify(result) === JSON.stringify(['l'])) {
 		result = ['L'];
 		result = result.join('');
-		console.log('lowercase l condition typeof is: ',typeof(result));
-		console.log('lowercase l result is: ',result);
 		return result;
 	} else {
 	// default condition
 		result = result.join('');	     	
-		console.log('default result typeeof is: ',typeof(result));
 		return result;
 	};
 	
