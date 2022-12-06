@@ -1,7 +1,8 @@
 Tracking:
 
 12/06/22:
-Accomplished - continue work on unit tests - finished unit tests and passing! 
+Accomplished - continue work on unit tests - finished unit tests and passing!
+- finished functional tests - passing! 
 Tomorrow - 
 
 12/05/22:

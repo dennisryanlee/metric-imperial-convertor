@@ -9,7 +9,7 @@ module.exports = function (app) {
 
 	app.route('/api/convert').get((req, res) => {
 		let input = req.query.input;
-		console.log('input is: ',input);
+		// console.log('input is: ',input);
 		try {
 			let invalidNumber = false;
 			let invalidUnit = false;
@@ -17,7 +17,7 @@ module.exports = function (app) {
 			let initNum = convertHandler.getNum(input);
 			let initUnit = convertHandler.getUnit(input);
 
-			if (initNum === 'invalid number') {
+			if (initNum === null) {
 				invalidNumber = true;
 			};
 			
@@ -30,24 +30,15 @@ module.exports = function (app) {
 				initUnit = initUnit.toLowerCase();
 			};
 
-			if (invalidNumber === null && invalidUnit === true) {
+			if (invalidNumber === true && invalidUnit === true) {
 			// if both the number and unit are invalid
-				res.json({ 
-					error: 'invalid number and unit',
-					string: 'invalid number and unit'
-				});
-			} else if (invalidNumber === null) {
+				res.send('invalid number and unit');
+			} else if (invalidNumber === true) {
 			// if just the number is invalid
-				res.json({
-					error: 'invalid number',
-					string: 'invalid number'
-				});
+				res.send('invalid number');
 			} else if (invalidUnit === true) {
 			// if just the unit is invalid
-				res.json({
-					error: 'invalid unit',
-					string: 'invalid unit'
-				});
+				res.send('invalid unit');
 			} else {
 			// otherwise, proceed normally
 
