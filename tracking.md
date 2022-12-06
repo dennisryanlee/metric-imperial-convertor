@@ -3,7 +3,7 @@ Tracking:
 12/06/22:
 Accomplished - continue work on unit tests - finished unit tests and passing!
 - finished functional tests - passing! 
-Tomorrow - 
+Tomorrow - need to figure out how to get finished project working with FCC tests
 
 12/05/22:
 Accomplished - it appears only lowercase units are being accepted; need to change regex to accept uppercase units also; change switch statements to accept uppercase also; resolve comparing arrays in JavaScript - used JSON.stringify - to resolve 'l' init unit problem - unfortunately this didn't solve the problem! = trying different solution - didn't work!; one additional try - change res json initUnit response
