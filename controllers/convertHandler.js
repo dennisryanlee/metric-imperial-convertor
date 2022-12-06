@@ -24,14 +24,14 @@ function ConvertHandler() {
 	} else if (slashCount > 1) {
 	// then check if valid number - if fraction, that is okay;
 		// but if double-fraction that should return error
-		return 'invalid number';
+		result = null;
+		return result;
 	} else if (slashCount == 1) {
 	// convert fraction to decimal
 		const parseFraction = fraction => {
 			const [numerator, denominator] = fraction.split('/').map(Number);
 			return numerator / denominator;
 		};
-		console.log('parseFraction result is: ',parseFraction(result));
 		return parseFraction(result);
 	} else {	
 	// default condition

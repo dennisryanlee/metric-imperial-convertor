@@ -30,20 +30,23 @@ module.exports = function (app) {
 				initUnit = initUnit.toLowerCase();
 			};
 
-			if (invalidNumber === true && invalidUnit === true) {
+			if (invalidNumber === null && invalidUnit === true) {
 			// if both the number and unit are invalid
 				res.json({ 
-					error: 'invalid number and unit'
+					error: 'invalid number and unit',
+					string: 'invalid number and unit'
 				});
-			} else if (invalidNumber === true) {
+			} else if (invalidNumber === null) {
 			// if just the number is invalid
 				res.json({
-					error: 'invalid number'
+					error: 'invalid number',
+					string: 'invalid number'
 				});
 			} else if (invalidUnit === true) {
 			// if just the unit is invalid
 				res.json({
-					error: 'invalid unit'
+					error: 'invalid unit',
+					string: 'invalid unit'
 				});
 			} else {
 			// otherwise, proceed normally
