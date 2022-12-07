@@ -2,6 +2,7 @@ Tracking:
 
 12/07/22:
 - replit situation still messed up. Next step is probably to fork FCC repo and copy over changed files from this repo
+- update functional tests to see if that makes a difference
 
 12/06/22:
 Accomplished - continue work on unit tests - finished unit tests and passing!
