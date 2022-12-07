@@ -3,6 +3,7 @@ Tracking:
 12/06/22:
 Accomplished - continue work on unit tests - finished unit tests and passing!
 - finished functional tests - passing! 
+Evening work - still can't get replit to work correctly with freeCodeCamp
 Tomorrow - need to figure out how to get finished project working with FCC tests
 
 12/05/22:
