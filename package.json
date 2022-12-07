@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "Metric / Imperial Unit Converter",
 	"main": "server.js",
+	"private": true,
 	"scripts": {
 		"start": "node server.js",
 		"test": "mocha ./tests/ --ui tdd"
