@@ -1,5 +1,9 @@
 Tracking:
 
+12/08/22:
+- Accomplished - spent more time looking into replit issue - it appears RAM is maxing out on deployment (may not be relevant to the issue); main issue is that there is some sort of loop started after the tests run and it won't stop running tests and you can't use the website; started looking through mocha docs; need to look at the functional tests in more detail to see if I can determine what specific issue is causing the problem - sounds like something with the get requests 
+- Tomorrow - keep working on replit issue
+
 12/07/22:
 - replit situation still messed up. Next step is probably to fork FCC repo and copy over changed files from this repo
 - update functional tests to see if that makes a difference
