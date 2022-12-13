@@ -1,5 +1,12 @@
 Tracking:
 
+12/13/22:
+- things I've tried to get replit to work - change timeout; change .replit file
+Additional resource - https://replit.com/@sssmsm/boilerplate-project-issuetracker
+https://stackoverflow.com/questions/69761291/express-route-is-not-created-inside-async-function/69765932#69765932
+https://stackoverflow.com/questions/69782225/chai-mocha-tests-stop-express-server-from-listening
+https://www.npmjs.com/package/why-is-node-running
+
 12/08/22:
 - Accomplished - spent more time looking into replit issue - it appears RAM is maxing out on deployment (may not be relevant to the issue); main issue is that there is some sort of loop started after the tests run and it won't stop running tests and you can't use the website; started looking through mocha docs; need to look at the functional tests in more detail to see if I can determine what specific issue is causing the problem - sounds like something with the get requests 
 - Tomorrow - keep working on replit issue
