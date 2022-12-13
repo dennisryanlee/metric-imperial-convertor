@@ -2,6 +2,7 @@ Tracking:
 
 12/13/22:
 - things I've tried to get replit to work - change timeout; change .replit file
+- figured out I was missing several unit tests - this should get the project to pass
 Additional resource - https://replit.com/@sssmsm/boilerplate-project-issuetracker
 https://stackoverflow.com/questions/69761291/express-route-is-not-created-inside-async-function/69765932#69765932
 https://stackoverflow.com/questions/69782225/chai-mocha-tests-stop-express-server-from-listening
